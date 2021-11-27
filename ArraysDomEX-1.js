@@ -48,7 +48,7 @@ function matrix(){
 		}
 		tabla.appendChild(rows);
 	}*/
-	/--Fin--/
+	/-Fin--/
 	//atributos de tabla para estética
 	tabla.setAttribute("border", "2");
 	tabla.setAttribute("text-align", "center");
