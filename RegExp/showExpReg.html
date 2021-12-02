@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de cadenas con Expresiones Regulares - Lo que se muestra</title>
+    <style>
+        a:visited {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body><center>
+    <h1>Uso de Expresiones Regulares para Validación de Cadenas</h1>
+    <h2 id="namePersonValidate">Francisco Emanuel Grijalva Ramirez</h2>
+    <h3>Ejercicio 12</h3>
+    <p>
+        Número de control: 18390031<br>
+        Grupo: I7U<br>
+        Carrera: Ing. Sistemas Computacionales<br>
+        Ejercicio 12. Color HSL (HUE, SATURATION, LIGHTNESS).
+    </p>
+    <script>
+        let hue = localStorage.getItem("Hue");
+        let Sat = localStorage.getItem("Saturation");
+        let Light = localStorage.getItem("Lightness");
+
+        document.write("<h3 style='color:hsl("+hue+","+Sat+"%,"+Light+"%"+")'>Hue(Tono): "+hue+". Saturation(Saturacion): "+Sat+". Lightness (Luminosidad): "+Light+"</h3>");
+    </script>
+    <a href="ExpresionesRegulares.html" style="text-decoration:none">Regresar: Nombre y HSL de Nombre</a></center>
+</body>
+</html>
