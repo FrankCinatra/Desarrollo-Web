@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejemplo de uso de localStorage</title>
+
+	
+</head>
+<body>
+	<form name="formAcceso" action="paginaPrincipal.html">
+		<p>Usuario: </p>
+		<input type="text" id="edUsuario">
+		<p>Contraseña: </p>
+		<input type="text" id="edContrasena">
+
+		<input type="button" value="Entrar" onclick="verificar()">
+	</form>
+
+	<script language="javascript">
+		function verificar(){
+			if ((document.formAcceso.edUsuario.value=='admin')
+				&& (document.formAcceso.edContrasena.value=='123456')){
+				localStorage.setItem('usuario', '{"isbn":"123-456-222","author":{"lastname":"Doe","firstname":"Jane"},"editor":{"lastname":"Smith","firstname":"Jane"},"title":"The Ultimate Database Study Guide","category":["Non-Fiction","Technology"] }');
+					//document.formAcceso.edUsuario.value);
+				localStorage.setItem('passwd', document.formAcceso.edContrasena.value);
+
+				document.formAcceso.submit();
+			}
+			else alert('Usuario y contraseña incorrectos. Intente de nuevo');
+
+		}
+
+		//Implementar en body onload
+		//Agregar esta función en el <head>
+		function sesionIniciada(){
+			let usr = localStorage.getItem('usuario');
+			let pwd = localStorage.getItem('passwd');
+			
+			//Redirección a página principal	
+		}
+	</script>
+</body>
+</html>
