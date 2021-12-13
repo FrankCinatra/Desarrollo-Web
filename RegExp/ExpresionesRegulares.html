@@ -12,9 +12,7 @@
 
             let namePerson = document.getElementById("namePerson").value;
             let idhsl = document.getElementById("idhsl").value;
-
-            alert(nombre.test(namePerson));
-            alert(hslColor.test(idhsl));
+            
             if(nombre.test(namePerson)){
                 if(hslColor.test(idhsl)){
                     let arrayHSL = idhsl.split(',');
@@ -23,7 +21,11 @@
                     localStorage.setItem("Saturation",arrayHSL[1]);
                     localStorage.setItem("Lightness",arrayHSL[2]);
                     document.ColorHSL.submit();
+                }else{
+                    alert("Los datos del color en HSL no son correctos");
                 }
+            }else{
+                alert("El nombre no cumple con el formato");
             }
         }
     </script>

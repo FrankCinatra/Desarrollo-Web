@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+<h2>Using the XMLHttpRequest Object</h2>
+
+<div id="demo">
+  <button type="button" onclick="nameBrazil()">Languaje from Brasil</button>
+  <button type="button" onclick="brazilflag()">Flags</button>
+</div>
+
+<script>
+
+  /*let respJson = {};
+  function loadXMLDoc() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        respJson = JSON.parse(this.responseText);
+        document.getElementById("demo").innerHTML = respJson[0].name.common;
+        document.getElementById("demo").innerHTML = this.response;
+      }
+    };
+    xhttp.open("GET", "https://flagcdn.com/256x192/fr.png", true);
+    xhttp.send();
+  }*/
+
+  function nameBrazil(){
+    fetch('https://restcountries.com/v3.1/name/brazil').then(arrayobtenido => arrayobtenido.json()).then(function(arrayobtenido){
+      let body = document.getElementsByTagName('body')[0];
+      brazil = document.createElement('h3');
+      brazil.innerHTML = "Nombre: "+arrayobtenido[0].name.common +"<br>Nombre oficial: "+arrayobtenido[0].name.official;
+      body.appendChild(brazil);
+    });
+  }
+  function brazilflag(){
+      fetch('https://flagcdn.com/108x81/br.png').then(arrayobtenido => arrayobtenido.blob()).then(arrayobtenido =>{
+        let body = document.getElementsByTagName('body')[0];
+        let urlflag = URL.createObjectURL(arrayobtenido);
+        let flag = new Image();
+        flag.src = urlflag;
+        body.appendChild(flag);
+      });
+  }
+</script>
+
+</body>
+</html>
