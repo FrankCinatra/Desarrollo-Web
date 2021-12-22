@@ -1,0 +1,37 @@
+
+Elaboración un proyecto web usando JavaScript que:
+
+- Tenga al menos 3 páginas web, navegables entre sí (mediante links, por eventos), 
+- consuma datos de una fuente web (web Service) de forma asíncrona (XMLHttpRequest, fetch, etc.), 
+- visualice los datos en página web y con ellos se puedan navegar, modificar y almacenar localmente (localStorage).
+- Aplicar 3 recursos de BootStrap para diseño en sus páginas web.
+
+------------------------------------------------------------------
+
+Temas:
+
+- Programación Orientada a Objetos (30%)
+	- Uso clases
+	- Atributos, métodos (getters, setters)
+
+- JSON (20%)
+	- Convertir objetos en código a cadenas JSON válido
+	- Convertir string JSON a objeto en código javascript
+	- Filtro o selección de datos recuperados. Ej: Solo los datos de México, de personas mayores, de autobuses, etc.
+	- Almacenamiento y recuperación (LocalStorage)
+
+- Validación de formularios (10%)
+	- Validación HTML
+	- Expresiones regulares 
+
+- Uso de DOM (20%)
+	- Para acceso de elementos de una página Web.
+	- Uso de eventos
+
+- Consumo de datos de WebService de forma asíncrona (10%)
+
+- BootStrap (Aplicación de diseño mediante Clases CSS predefinidas) 10%
+	
+
+
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+    <meta charset="UTF-8">
+    <title>Consulta de paÃ­ses</title>
+    <script>
+        function armaUrl(){
+          let peticion = document.frmPeticion.edUrl.value + document.frmPeticion.edNombrePais.value;
+          obtenerDatos(peticion);
+        }
+
+        function obtenerDatos(url){
+            fetch(url,
+                {
+                    "method": "GET",
+                    "mode": 'no-cors'
+            })
+            .then(response => {
+                console.log(response);
+            })
+            .catch(err => {
+                console.error(err);
+            });
+        }
+    </script>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_SharedWithUsers msdt:dt="string">Integrantes de la DSC_Investigación</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_SharedWithUsers>
+<mso:SharedWithUsers msdt:dt="string">64;#Integrantes de la DSC_Investigación</mso:SharedWithUsers>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <div id="consulta">
+        <form name="frmPeticion" action="#" enctype="multipart/form-data">
+            <label for="edUrl">Url: </label>
+            <input type="text" id="edUrl" name="edUrl" readonly value="https://restcountries.com/v2/name/">
+            <br>
+            <label for="edNombrePais">Nombre del paÃ­s: </label>
+            <input type="text" id="edNombrePais" name="edNombrePais" value="Mexico">
+            <input type="button" value="Enviar" onclick="armaUrl()">
+        </form>
+    </div>
+
+</body>
+</html>
