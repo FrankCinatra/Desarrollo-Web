@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="functions.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>Registro de usuario nuevo</h1>
+        </div>
+
+        <form name="registro" action="shop.html">
+            <div class="form-group">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Enter name">
+                <label for="email">Email:</label>
+                <input type="text" class="form-control" id="email" placeholder="Enter email">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+            </div>
+            <input type="button" class="btn btn-default" onclick="validateStrings()" value="Iniciar Sesion">
+        </form>
+    </div>
+</body>
+</html>
