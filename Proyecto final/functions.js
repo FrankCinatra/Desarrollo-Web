@@ -46,17 +46,23 @@ function validateStrings(){
     }
 }
 function signIn(){
-    if(localStorage.getItem('user')){
+    cont=0;
+    if(localStorage.getItem('user'+cont)){
         let email = document.getElementById("email").value;
         let pwd = document.getElementById("pwd").value;
-        let user = JSON.parse(localStorage.getItem('user'));
+        let user = '';
 
-        for(let i=0; i<user.length; i++){
-            if(email == user[i]){
+        while(localStorage.getItem('user'+cont)){
+            user = JSON.parse(localStorage.getItem('user'+cont));
+
+            if(email == user['Email'] && pwd == user['Password']){
                 document.sesionInit.submit();
-            }else{
-                alert("Usuario invalido");
+                break;
             }
+            cont++;
+        }
+        if(email != user['Email'] && pwd != user['Password']){
+            alert("Usuario invalido");
         }
     }else{alert("No hay usuarios registrados");}
 }
