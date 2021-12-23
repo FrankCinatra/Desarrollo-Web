@@ -74,3 +74,14 @@ class Usuario{
         this.password = pwd;
     }
 }
+
+function brazilflag(){
+    fetch('https://flagcdn.com/108x81/mx.png').then(arrayobtenido => arrayobtenido.blob()).then(arrayobtenido =>{
+        let body = document.getElementsByTagName('body')[0];
+
+        let urlflag = URL.createObjectURL(arrayobtenido);
+        let flag = new Image();
+        flag.src = urlflag;
+        body.appendChild(flag).setAttribute('align','right');
+    });
+}
